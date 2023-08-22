@@ -6,6 +6,7 @@ const MainProvider = createContext();
 
 const initialState = {
   data: [],
+  pages: ["home", "destinations", "crew", "technology"],
 };
 
 function MainContext({ children }) {
@@ -43,12 +44,13 @@ function MainContext({ children }) {
     mainData();
   }, []);
 
-  const [{ data }, dispatch] = useReducer(reducer, initialState);
+  const [{ data, pages }, dispatch] = useReducer(reducer, initialState);
   return (
     <MainProvider.Provider
       value={{
         dispatch,
         data,
+        pages,
       }}
     >
       {children}

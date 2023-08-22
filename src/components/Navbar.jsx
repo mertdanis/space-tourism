@@ -1,30 +1,33 @@
 import { NavLink } from "react-router-dom";
 
+import { useData } from "../context/MainContext";
+
 function Navbar() {
+  const { pages } = useData();
+
   return (
-    <div className="mt-6 h-1/6 flex justify-between pl-[5rem]  py-6 items-center   ">
+    <div className="  h-1/6 flex justify-between pl-[5rem]  py-[6rem] items-center   ">
       <img
-        className="cursor-pointer ml-6"
+        className="cursor-pointer ml-6 h-[4rem]"
         src="public/imgs/shared\logo.svg"
         alt="Logo"
       />
-      <nav className="flex items-center justify-center bg-blue-500   p-6">
-        <ul className="flex gap-6 text-white text-2xl mr-[20rem] ml-[10rem]">
-          <li className="">
-            <NavLink to="/">Homepage</NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/destinations">Destination</NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/crew">Crew</NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/technology">Technology</NavLink>
-          </li>
+      <nav className="border-b-4">
+        <ul className="flex gap-6 text-white text-2xl mr-[10rem] ml-[10rem] ">
+          {pages?.map((a, index) => {
+            return (
+              <NavLink
+                key={index}
+                to={a}
+                className="transition duration-500 uppercase cursor-pointer hover:border-t-2   p-3 "
+              >
+                <div className="flex gap-3">
+                  <p>0{index}</p>
+                  <p>{a}</p>
+                </div>
+              </NavLink>
+            );
+          })}
         </ul>
       </nav>
     </div>

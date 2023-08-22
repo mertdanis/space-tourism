@@ -18,7 +18,7 @@ function Technology() {
     <>
       <Title>03 space launch 101</Title>
       <div className=" bg-black text-white p-3 flex">
-        <div className="flex gap-6 mx-[10rem] my-[15rem] w-1/2">
+        <div className="flex gap-6  w-1/2">
           <ul className="flex flex-col gap-6 justify-center ">
             {technology?.map((stepDiv, index) => {
               return (
@@ -28,7 +28,7 @@ function Technology() {
                       setStep(index);
                     }}
                     className={`cursor-pointer text-black   h-24 w-24 bg-white rounded-full flex justify-center items-center ${
-                      step === index ? "bg-red-500" : ""
+                      step === index ? "bg-black text-red" : ""
                     }`}
                   >
                     <p>{index}</p>

@@ -6,7 +6,6 @@ const MainProvider = createContext();
 
 const initialState = {
   data: [],
-  page: "homepage",
 };
 
 function MainContext({ children }) {
@@ -15,6 +14,7 @@ function MainContext({ children }) {
       case "data/loaded":
         return {
           ...state,
+
           data: action.payload,
         };
 
@@ -26,7 +26,7 @@ function MainContext({ children }) {
   useEffect(() => {
     const mainData = async () => {
       try {
-        const response = await axios.get("data/data.json");
+        const response = await axios.get("/data/data.json");
 
         dispatch({
           type: "data/loaded",
@@ -43,13 +43,12 @@ function MainContext({ children }) {
     mainData();
   }, []);
 
-  const [{ data, page }, dispatch] = useReducer(reducer, initialState);
+  const [{ data }, dispatch] = useReducer(reducer, initialState);
   return (
     <MainProvider.Provider
       value={{
         dispatch,
         data,
-        page,
       }}
     >
       {children}

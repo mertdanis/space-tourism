@@ -4,12 +4,11 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "home-background": "url('/imgs/home/background-home-desktop.jpg')",
-        "destination-background":
+        "/": "url('/imgs/home/background-home-desktop.jpg')",
+        destinations:
           "url('/imgs/destination/background-destination-desktop.jpg')",
-        "crew-background": "url('/imgs/crew/background-crew-desktop.jpg')",
-        "technology-background":
-          "url('/imgs/technology/background-technology-desktop.jpg')",
+        crew: "url('/imgs/crew/background-crew-desktop.jpg')",
+        technology: "url('/imgs/technology/background-technology-desktop.jpg')",
       },
     },
   },

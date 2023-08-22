@@ -15,7 +15,7 @@ function Navbar() {
           </li>
 
           <li>
-            <NavLink to="/destination">Destination</NavLink>
+            <NavLink to="/destinations">Destination</NavLink>
           </li>
 
           <li>

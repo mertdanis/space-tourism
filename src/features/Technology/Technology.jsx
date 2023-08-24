@@ -12,14 +12,12 @@ function Technology() {
 
   const technologyContent = data.technology?.[step];
 
-  console.log(technologyContent);
-
   return (
     <>
-      <Title>03 space launch 101</Title>
-      <div className=" bg-black text-white p-3 flex">
+      <Title pageNumber={"03"}> space launch 101</Title>
+      <div className="   text-white p-3 flex">
         <div className="flex gap-6  w-1/2">
-          <ul className="flex flex-col gap-6 justify-center ">
+          <ul className="flex flex-col gap-6 justify-center  ">
             {technology?.map((stepDiv, index) => {
               return (
                 <>
@@ -27,8 +25,8 @@ function Technology() {
                     onClick={() => {
                       setStep(index);
                     }}
-                    className={`cursor-pointer text-black   h-24 w-24 bg-white rounded-full flex justify-center items-center ${
-                      step === index ? "bg-black text-red" : ""
+                    className={`cursor-pointer  font-bold border-[1px]  h-24 w-24  rounded-full flex justify-center items-center ${
+                      step === index ? "bg-white text-black" : "bg-transparent"
                     }`}
                   >
                     <p>{index}</p>
@@ -48,7 +46,7 @@ function Technology() {
           </div>
         </div>
         <img
-          className="m-auto   w-1/4"
+          className="ml-auto  "
           src={`${technologyContent?.images.portrait}`}
           alt=""
         />

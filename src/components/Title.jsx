@@ -1,6 +1,7 @@
-function Title({ children }) {
+function Title({ children, pageNumber }) {
   return (
-    <h2 className=" text-white p-6 uppercase tracking-[0.2em] col-start-1 col-end-3">
+    <h2 className=" text-white  uppercase tracking-[0.2em] font-text ">
+      <span className="opacity-50">{pageNumber}</span>
       {children}
     </h2>
   );

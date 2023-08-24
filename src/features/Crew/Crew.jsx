@@ -9,18 +9,20 @@ function Crew() {
 
   const crewData = data.crew?.[currentMember];
 
-  console.log(data.crew?.length);
-
   return (
-    <div className=" bg-black text-white ">
-      <Title>02 meet your crew</Title>
+    <div className=" text-white ">
+      <Title pageNumber={"02"}> meet your crew</Title>
 
-      <div className="flex gap-6 m-[12rem]">
-        <div className="flex flex-col gap-6  p- 3">
-          <h2 className="text-4xl font-bold">{crewData?.role}</h2>
-          <h2 className="text-6xl font-bold">{crewData?.name}</h2>
+      <div className="flex gap-[10rem] ">
+        <div className="flex flex-col gap-6   mt-[10rem]">
+          <h2 className="text-2xl tracking-widest opacity-60 uppercase">
+            {crewData?.role}
+          </h2>
+          <h2 className="text-6xl tracking-wide mb-4 uppercase">
+            {crewData?.name}
+          </h2>
           <p>{crewData?.bio}</p>
-          <div className="flex gap-3 ml-3">
+          <div className="flex gap-5 ">
             {data.crew?.map((bg, index) => {
               return (
                 <>
@@ -28,8 +30,8 @@ function Crew() {
                     onClick={() => {
                       setCurrentMember(index);
                     }}
-                    className={`h-6 w-6 rounded-full bg-transparent border-4 cursor-pointer ${
-                      currentMember === index ? "bg-red-500" : ""
+                    className={`h-5 w-5 rounded-full   cursor-pointer mt-[7rem] ${
+                      currentMember === index ? "bg-white" : "bg-slate-700"
                     }`}
                   ></div>
                 </>
@@ -38,7 +40,7 @@ function Crew() {
           </div>
         </div>
 
-        <img src={`${crewData?.images.png}`} alt="" />
+        <img src={`${crewData?.images.png}`} alt={`${crewData?.name}`} />
       </div>
     </div>
   );

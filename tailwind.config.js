@@ -4,12 +4,17 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "/": "url('/imgs/home/background-home-desktop.jpg')",
+        home: "url('/imgs/home/background-home-desktop.jpg')",
         destinations:
           "url('/imgs/destination/background-destination-desktop.jpg')",
         crew: "url('/imgs/crew/background-crew-desktop.jpg')",
         technology: "url('/imgs/technology/background-technology-desktop.jpg')",
       },
+
+      fontFamily: {
+        title: ["Bellefair"],
+      },
+      text: ["Barlow"],
     },
   },
   plugins: [],

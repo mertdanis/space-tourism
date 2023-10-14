@@ -1,19 +1,10 @@
 import Navbar from "../components/Navbar";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function Layout() {
-  const currentPage = useLocation();
-  const pageInfo = currentPage.pathname;
-
-  const test = pageInfo.replace("/", "");
-
-  const bg = `${test}`;
-
-  console.log(bg);
-
   return (
     <div
-      className={`grid grid-cols-7 grid-rows-4 h-screen w-full bg-home bg-no-repeat bg-cover text-white `}
+      className={`grid grid-cols-7 grid-rows-4 h-screen w-full bg-destinations  bg-cover text-white `}
     >
       <header className="col-span-full row-span-1	">
         <Navbar />

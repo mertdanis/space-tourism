@@ -13,15 +13,15 @@ function Crew() {
     <div className=" text-white ">
       <Title pageNumber={"02"}> meet your crew</Title>
 
-      <div className="flex gap-[10rem] ">
+      <div className="flex gap-[10rem] w-[55%]">
         <div className="flex flex-col gap-6   mt-[10rem]">
-          <h2 className="text-2xl tracking-widest opacity-60 uppercase">
+          <h4 className="text-h4 tracking-widest opacity-50 text-mainWhite uppercase">
             {crewData?.role}
-          </h2>
-          <h2 className="text-6xl tracking-wide mb-4 uppercase">
+          </h4>
+          <h3 className="text-h3 mt-[15px] mb-[27px] tracking-wide  uppercase">
             {crewData?.name}
-          </h2>
-          <p>{crewData?.bio}</p>
+          </h3>
+          <p className="text-mainLight w-[65%]">{crewData?.bio}</p>
           <div className="flex gap-5 ">
             {data.crew?.map((bg, index) => {
               return (
@@ -40,7 +40,11 @@ function Crew() {
           </div>
         </div>
 
-        <img src={`${crewData?.images.png}`} alt={`${crewData?.name}`} />
+        <img
+          className="absolute bottom-0 right-[352px]"
+          src={`${crewData?.images.png}`}
+          alt={`${crewData?.name}`}
+        />
       </div>
     </div>
   );

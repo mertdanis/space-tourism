@@ -13,8 +13,24 @@ export default {
 
       fontFamily: {
         title: ["Bellefair"],
+        text: ["Barlow"],
       },
-      text: ["Barlow"],
+
+      colors: {
+        mainDark: "#0B0D17",
+        mainLight: "#D0D6F9",
+        mainWhite: "#FFFFFF",
+      },
+
+      fontSize: {
+        h1: "150px",
+        h2: "100px",
+        h3: "56px",
+        h4: "32px",
+        h5: "28px",
+        nav_text: "16px",
+        body_text: "18px",
+      },
     },
   },
   plugins: [],

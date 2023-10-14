@@ -15,11 +15,14 @@ function Destination() {
 
   return (
     <>
-      <Title pageNumber={"01"}> pick your destination</Title>
+      <Title className={"mb-[64px]"} pageNumber={"01"}>
+        {" "}
+        pick your destination
+      </Title>
       <div className="   text-white  ml-[6rem] ">
         <div className="flex gap-[10rem]   ">
           <img
-            className="h-full mt-[5rem] cursor-pointer hover:-translate-y-6 transition duration-500 "
+            className="h-full mt-[64px] cursor-pointer hover:-translate-y-6 transition duration-500 "
             src={`${currentDestination?.images.png}`}
             alt={currentDestination?.name}
             title={`${currentDestination?.name}`}
@@ -44,23 +47,20 @@ function Destination() {
               })}
             </ul>
 
-            <h2 className="uppercase text-[120px] my-[3rem] tracking-wide">
+            <h2 className="uppercase text-h2 my-[3rem] tracking-wide">
               {currentDestination?.name}
             </h2>
-            <p className="text-xl mb-6 opacity-70">
-              {" "}
+            <p className="text-body_text mb-6  text-mainLight">
               {currentDestination?.description}
             </p>
-            <div className=" border-t-2  flex justify-between gap-3 p-3 text-white  uppercase">
+            <div className=" border-t-2 border-[#383B4B]  flex justify-between gap-3 p-3 text-white  uppercase">
               <div className="mt-6 flex flex-col gap-3">
                 <p className="opacity-50">avg. distance</p>
-                <p className="tracking-widest">
-                  {currentDestination?.distance}
-                </p>
+                <h5 className="text-h5">{currentDestination?.distance}</h5>
               </div>
               <div className="mt-6 flex flex-col gap-3">
                 <p className="opacity-50">est. travel time</p>
-                <p className="tracking-widest">{currentDestination?.travel}</p>
+                <h5 className="text-h5">{currentDestination?.travel}</h5>
               </div>
             </div>
           </div>

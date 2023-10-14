@@ -16,9 +16,11 @@ import { MainContext } from "./context/MainContext.jsx";
 const router = createBrowserRouter([
   {
     element: <Layout />,
+
     children: [
       {
         path: "/home",
+
         element: <Home />,
       },
       {

@@ -16,7 +16,7 @@ function Technology() {
     <>
       <Title pageNumber={"03"}> space launch 101</Title>
       <div className="   text-white p-3 flex">
-        <div className="flex gap-6   mt-[130px]">
+        <div className="sm:flex flex-col   sm:mt-[130px]">
           <ul className="flex flex-col gap-[32px] justify-center  ">
             {technology?.map((stepDiv, index) => {
               return (
@@ -49,11 +49,11 @@ function Technology() {
             </p>
           </div>
         </div>
-        <img
+        {/* <img
           className=" absolute right-0  "
           src={`${technologyContent?.images.portrait}`}
           alt=""
-        />
+        /> */}
       </div>
     </>
   );

@@ -1,9 +1,9 @@
 function Title({ children, pageNumber, className }) {
   return (
     <h2
-      className={`text-mainWhite w-fit text-h5   uppercase tracking-[4.725px] font-text ${className}`}
+      className={`text-mainWhite w-fit sm:text-h5 text-[16px]   uppercase tracking-[4.725px] font-text ${className}`}
     >
-      <span className="text-h5 opacity-25 mr-[28px] font-bold">
+      <span className="sm:text-h5 text-[16px] opacity-25 sm:mr-[28px] mr-[10px] font-bold">
         {pageNumber}
       </span>
       {children}

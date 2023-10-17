@@ -19,22 +19,22 @@ function Destination() {
         {" "}
         pick your destination
       </Title>
-      <div className="   text-white  ml-[6rem] ">
-        <div className="flex gap-[10rem]   ">
+      <div className="   text-white  sm:ml-[6rem]  ">
+        <div className="flex-col sm:flex gap-[10rem]   ">
           <img
-            className="h-full mt-[64px] cursor-pointer hover:-translate-y-6 transition duration-500 "
+            className="sm:h-full h-[259px]  mt-[64px] cursor-pointer hover:-translate-y-6 transition duration-500 "
             src={`${currentDestination?.images.png}`}
             alt={currentDestination?.name}
             title={`${currentDestination?.name}`}
           />
 
-          <div className="flex flex-col gap-6  ml-[5rem]">
+          <div className="flex flex-col items-center gap-6  sm:ml-[5rem]">
             <ul className="flex gap-6 uppercase text-xl">
               {destinations?.map((title, index) => {
                 return (
                   <li
                     key={index}
-                    className={`cursor-pointer hover:border-b-4 ${
+                    className={`cursor-pointer hover:border-b-4 text-[14px] ${
                       content === index ? "border-b-4 " : ""
                     }`}
                     onClick={() => {
@@ -47,13 +47,13 @@ function Destination() {
               })}
             </ul>
 
-            <h2 className="uppercase text-h2 my-[3rem] tracking-wide">
+            <h2 className="uppercase sm:text-h2 text-h3 my-[3rem] tracking-wide">
               {currentDestination?.name}
             </h2>
-            <p className="text-body_text mb-6  text-mainLight">
+            <p className="sm:text-body_text text-[15px] sm:w-full w-[80vw] mb-6  text-mainLight">
               {currentDestination?.description}
             </p>
-            <div className=" border-t-2 border-[#383B4B]  flex justify-between gap-3 p-3 text-white  uppercase">
+            <div className=" border-t-2 border-[#383B4B]  sm:flex flex-col justify-between gap-3 p-3 text-white  uppercase">
               <div className="mt-6 flex flex-col gap-3">
                 <p className="opacity-50">avg. distance</p>
                 <h5 className="text-h5">{currentDestination?.distance}</h5>

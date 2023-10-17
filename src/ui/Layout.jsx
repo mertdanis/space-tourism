@@ -10,9 +10,11 @@ function Layout() {
 
   return (
     <div
-      className={`grid grid-cols-7 grid-rows-4 h-screen w-full bg-destinations  bg-cover text-white ${
+      className={`grid grid-cols-7 grid-rows-4 h-screen w-full   bg-cover text-white ${
         currentPage === "/home" ? "bg-home" : ""
       }
+      ${currentPage === "/" ? "bg-home" : ""}
+      ${currentPage === "/destinations" ? "bg-destinations" : ""}
       ${currentPage === "/crew" ? "bg-crew" : ""}
       ${currentPage === "/technology" ? "bg-technology" : ""}
       `}

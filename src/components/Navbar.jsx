@@ -12,7 +12,7 @@ function Navbar() {
   console.log(openHamburger);
 
   return (
-    <div className=" sm:h-1/6  flex justify-between sm:pl-[5rem]  sm:py-[6rem] sm:items-center py-[3rem]  ">
+    <div className=" bg-[rgba(255, 255, 255, 0.04)] backdrop-blur-[40px] flex justify-between sm:pl-[5rem]  sm:py-[6rem] sm:items-center py-[3rem]  ">
       <div
         className={`flex justify-between   w-full px-6 ${
           openHamburger ? "items-start" : "items-center"
@@ -36,10 +36,10 @@ function Navbar() {
         </Link>
 
         {openHamburger ? (
-          <div className="absolute right-0 top-0 bg-black  sm:hidden h-screen z-10  p-2  text-mainWhite ">
+          <div className="absolute right-0 top-0 bg-[rgba(255, 255, 255, 0.04)] backdrop-blur-[40px]  sm:hidden h-screen z-10  p-2  text-mainWhite ">
             <div
               onClick={() => setopenHamburger(false)}
-              className="absolute right-0 top-4 cursor-pointer "
+              className="absolute right-6 py-[48px] cursor-pointer "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ function Navbar() {
                 />
               </svg>
             </div>
-            <nav className="flex mt-6">
+            <nav className="flex mt-[10rem]">
               <ul className=" flex flex-col text-white sm:text-2xl text-[16px] mr-[10rem] ml-[10rem] ">
                 {pages?.map((page, index) => {
                   return (
@@ -100,7 +100,7 @@ function Navbar() {
         )}
       </div>
 
-      <nav className="border-b-4 hidden sm:block">
+      <nav className=" hidden sm:block">
         <ul className="flex gap-6 text-white text-2xl mr-[10rem] ml-[10rem] ">
           {pages?.map((page, index) => {
             return (

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { useData } from "../context/MainContext";
 
@@ -12,11 +12,15 @@ function Navbar() {
   console.log(openHamburger);
 
   return (
-    <div className="  h-1/6 flex justify-between pl-[5rem]  py-[6rem] items-center   ">
-      <div className="flex justify-between items-center">
-        <NavLink to="/home">
+    <div className=" sm:h-1/6  flex justify-between sm:pl-[5rem]  sm:py-[6rem] sm:items-center py-[3rem]  ">
+      <div
+        className={`flex justify-between   w-full px-6 ${
+          openHamburger ? "items-start" : "items-center"
+        }`}
+      >
+        <Link to="/home">
           <svg
-            className="cursor-pointer ml-6 sm:h-[4rem] "
+            className="cursor-pointer sm:ml-6 sm:h-[4rem] "
             xmlns="http://www.w3.org/2000/svg"
             width="48"
             height="48"
@@ -29,60 +33,58 @@ function Navbar() {
               />
             </g>
           </svg>
-        </NavLink>
-
-        <div className="relative h-fit w-fit  justify-center items-center p-2 bg-black text-mainWhite ">
-          <div
-            onClick={() => setopenHamburger(false)}
-            className="absolute right-0 top-4 cursor-pointer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="21"
-              viewBox="0 0 20 21"
-              fill="none"
-            >
-              <rect
-                x="2.5752"
-                y="0.954102"
-                width="24"
-                height="3"
-                transform="rotate(45 2.5752 0.954102)"
-                fill="#D0D6F9"
-              />
-              <rect
-                x="0.454102"
-                y="17.9246"
-                width="24"
-                height="3"
-                transform="rotate(-45 0.454102 17.9246)"
-                fill="#D0D6F9"
-              />
-            </svg>
-          </div>
-          <nav className=" ">
-            <ul className="flex flex-col  text-white sm:text-2xl text-[16px] mr-[10rem] ml-[10rem] ">
-              {pages?.map((page, index) => {
-                return (
-                  <NavLink
-                    key={index}
-                    to={page}
-                    className="transition duration-500 uppercase cursor-pointer hover:font-bold p-3 "
-                  >
-                    <div className="flex gap-3">
-                      <p>0{index}</p>
-                      <p>{page}</p>
-                    </div>
-                  </NavLink>
-                );
-              })}
-            </ul>
-          </nav>
-        </div>
+        </Link>
 
         {openHamburger ? (
-          ""
+          <div className="absolute right-0 top-0 bg-black  sm:hidden h-screen z-10  p-2  text-mainWhite ">
+            <div
+              onClick={() => setopenHamburger(false)}
+              className="absolute right-0 top-4 cursor-pointer "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="21"
+                viewBox="0 0 20 21"
+                fill="none"
+              >
+                <rect
+                  x="2.5752"
+                  y="0.954102"
+                  width="24"
+                  height="3"
+                  transform="rotate(45 2.5752 0.954102)"
+                  fill="#D0D6F9"
+                />
+                <rect
+                  x="0.454102"
+                  y="17.9246"
+                  width="24"
+                  height="3"
+                  transform="rotate(-45 0.454102 17.9246)"
+                  fill="#D0D6F9"
+                />
+              </svg>
+            </div>
+            <nav className="flex mt-6">
+              <ul className=" flex flex-col text-white sm:text-2xl text-[16px] mr-[10rem] ml-[10rem] ">
+                {pages?.map((page, index) => {
+                  return (
+                    <NavLink
+                      key={index}
+                      to={page}
+                      className="transition duration-500 uppercase cursor-pointer hover:font-bold p-3 "
+                    >
+                      <div className="flex gap-3">
+                        <p>0{index}</p>
+                        <p>{page}</p>
+                      </div>
+                    </NavLink>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
         ) : (
           <svg
             onClick={() => setopenHamburger(true)}

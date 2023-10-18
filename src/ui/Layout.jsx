@@ -19,7 +19,9 @@ function Layout() {
       ${currentPage === "/technology" ? "bg-technology" : ""}
       `}
     >
-      <header className="col-span-full row-span-1	">{/* <Navbar /> */}</header>
+      <header className="col-span-full row-span-1	">
+        <Navbar />
+      </header>
 
       <main className=" text-white text-2xl  sm:col-start-2 sm:col-end-7	">
         <Outlet />

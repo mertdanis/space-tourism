@@ -16,8 +16,8 @@ function Technology() {
     <>
       <Title pageNumber={"03"}> space launch 101</Title>
       <div className="   text-white p-3 flex">
-        <div className="sm:flex flex-col   sm:mt-[130px]">
-          <ul className="flex flex-col gap-[32px] justify-center  ">
+        <div className="sm:flex sm:flex-row flex flex-col    sm:mt-[130px]">
+          <ul className="sm:flex sm:flex-col flex flex-row gap-[32px] justify-center  ">
             {technology?.map((stepDiv, index) => {
               return (
                 <>
@@ -25,7 +25,7 @@ function Technology() {
                     onClick={() => {
                       setStep(index);
                     }}
-                    className={`cursor-pointer  font-bold border-[1px]  h-[80px] w-[80px] mr-6 rounded-full flex justify-center items-center ${
+                    className={`cursor-pointer  font-bold border-[1px]  sm:h-[80px] sm:w-[80px] w-[40px] h-[40px] sm:mr-6 rounded-full flex justify-center items-center ${
                       step === index
                         ? "bg-white text-mainDark"
                         : "bg-transparent"
@@ -37,14 +37,14 @@ function Technology() {
               );
             })}
           </ul>
-          <div className="flex flex-col gap-6  p-6 ">
-            <p className="text-nav_text uppercase text-mainLight tracking-[2.7px] font-thin">
+          <div className="flex flex-col sm:gap-6  p-6 sm:items-start items-center ">
+            <p className="sm:text-nav_text text-[14px] uppercase text-mainLight tracking-[2.7px] font-thin">
               the terminology...
             </p>
-            <h3 className="uppercase text-h3 tracking-widest  my-6">
+            <h3 className="uppercase sm:text-h3 text-[24px] tracking-widest  my-6">
               {technologyContent?.name}
             </h3>
-            <p className="w-1/2 text-body_text text-mainLight">
+            <p className="sm:w-1/2  sm:text-body_text text-[15px] text-mainLight">
               {technologyContent?.description}
             </p>
           </div>

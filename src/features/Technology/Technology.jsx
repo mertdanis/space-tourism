@@ -55,11 +55,11 @@ function Technology() {
             </p>
           </div>
         </div>
-        {/* <img
-          className=" absolute right-0  "
+        <img
+          className=" absolute right-0 sm:block hidden "
           src={`${technologyContent?.images.portrait}`}
           alt=""
-        /> */}
+        />
       </div>
     </>
   );

@@ -15,20 +15,20 @@ function Destination() {
 
   return (
     <>
-      <Title className={"mb-[64px]"} pageNumber={"01"}>
+      <Title className={"sm:mb-[64px] my-[20px]"} pageNumber={"01"}>
         {" "}
         pick your destination
       </Title>
-      <div className="   text-white  sm:ml-[6rem]  ">
-        <div className="flex-col sm:flex gap-[10rem]   ">
+      <div className="     sm:ml-[6rem]  ">
+        <div className="flex items-center  justify-center flex-col  sm:flex sm:gap-[10rem]   ">
           <img
-            className="sm:h-full h-[259px]  mt-[64px] cursor-pointer hover:-translate-y-6 transition duration-500 "
+            className="sm:h-full h-[259px]  sm:mt-[64px] my-[20px] cursor-pointer hover:-translate-y-6 transition duration-500 "
             src={`${currentDestination?.images.png}`}
             alt={currentDestination?.name}
             title={`${currentDestination?.name}`}
           />
 
-          <div className="flex flex-col items-center gap-6  sm:ml-[5rem]">
+          <div className="flex flex-col items-center sm:gap-6  sm:ml-[5rem]">
             <ul className="flex gap-6 uppercase text-xl">
               {destinations?.map((title, index) => {
                 return (

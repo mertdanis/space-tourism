@@ -12,9 +12,15 @@ function Technology() {
 
   const technologyContent = data.technology?.[step];
 
+  console.log(technologyContent);
+
   return (
     <>
       <Title pageNumber={"03"}> space launch 101</Title>
+      <img
+        className="sm:hidden block my-[20px]"
+        src={`${technologyContent?.images.landscape}`}
+      />
       <div className="   text-white p-3 flex">
         <div className="sm:flex sm:flex-row flex flex-col    sm:mt-[130px]">
           <ul className="sm:flex sm:flex-col flex flex-row gap-[32px] justify-center  ">

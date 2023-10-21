@@ -11,12 +11,20 @@ function Layout() {
   return (
     <div
       className={`grid sm:grid-cols-7 grid-cols-1 sm:grid-rows-4 gird-rows-1 h-screen w-screen text-center sm:text-start    bg-cover text-white ${
-        currentPage === "/home" ? "bg-home" : ""
+        currentPage === "/home" ? "sm:bg-home bg-homeMobile" : ""
       }
-      ${currentPage === "/" ? "bg-home" : ""}
-      ${currentPage === "/destinations" ? "bg-destinations" : ""}
-      ${currentPage === "/crew" ? "bg-crew" : ""}
-      ${currentPage === "/technology" ? "bg-technology" : ""}
+      ${currentPage === "/" ? "sm:bg-home bg-homeMobile" : ""}
+      ${
+        currentPage === "/destinations"
+          ? "sm:bg-destinations bg-destinationsMobile"
+          : ""
+      }
+      ${currentPage === "/crew" ? "sm:bg-crew bg-crewMobile" : ""}
+      ${
+        currentPage === "/technology"
+          ? "sm:bg-technology bg-technologyMobile"
+          : ""
+      }
       `}
     >
       <header className="sm:col-span-full sm:row-span-1  	">

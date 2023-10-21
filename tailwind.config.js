@@ -5,10 +5,16 @@ export default {
     extend: {
       backgroundImage: {
         home: "url('/imgs/home/background-home-desktop.jpg')",
+        homeMobile: "url('/imgs/home/background-home-mobile.jpg')",
         destinations:
           "url('/imgs/destination/background-destination-desktop.jpg')",
+        destinationsMobile:
+          "url('/imgs/destination/background-destination-mobile.jpg')",
         crew: "url('/imgs/crew/background-crew-desktop.jpg')",
+        crewMobile: "url('/imgs/crew/background-crew-mobile.jpg')",
         technology: "url('/imgs/technology/background-technology-desktop.jpg')",
+        technologyMobile:
+          "url('/imgs/technology/background-technology-mobile.jpg')",
       },
 
       fontFamily: {

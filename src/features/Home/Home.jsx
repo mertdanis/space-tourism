@@ -4,13 +4,13 @@ function Home() {
   return (
     <>
       <div className="  text-white bg-cover   flex flex-col sm:mt-[160px]  ">
-        <div className="flex flex-col items-center  sm:gap-0  px-[10px] sm:flex sm:my-0 my-[50px]  sm:items-center ">
+        <div className="flex sm:flex-row flex-col  items-center  sm:gap-0  px-[10px] sm:flex sm:my-0 my-[50px]  sm:items-center ">
           <div className="flex flex-col gap-[16px] sm:items-start    ">
-            <div className="flex flex-col   uppercase ">
+            <div className="flex flex-col  gap-[16px] uppercase ">
               <p className="tracking-[4.725px] sm:text-h5 text-[16px] text-mainLight">
                 so, you want to travel to
               </p>
-              <h1 className="sm:text-h1 text-[80px]  sm:my-[80px] my-[15px]  ">
+              <h1 className="sm:text-h1 text-[80px]   sm:my-[80px] my-[15px]  ">
                 space
               </h1>
             </div>
@@ -23,8 +23,10 @@ function Home() {
           </div>
 
           <Link to="/destinations">
-            <div className="  sm:mt-[5rem] duration-300 text-mainDark  hover:bg-black hover:text-white h-[150px] w-[150px]  sm:h-72 sm:w-72 sm:ml-auto  transition hover:-translate-y-2 rounded-full border cursor-pointer bg-white  flex items-center justify-center uppercase ">
-              <span className="p-6 text-h4  tracking-[2px]  ">Explore</span>
+            <div className=" mt-[81px] sm:mt-[5rem] duration-300 text-mainDark  hover:bg-black hover:text-white h-[150px] w-[150px]  sm:h-72 sm:w-72 sm:ml-auto  transition hover:-translate-y-2 rounded-full border cursor-pointer bg-white  flex items-center justify-center uppercase ">
+              <span className="p-6 sm:text-h4 text-[20px]  tracking-[2px]  ">
+                Explore
+              </span>
             </div>
           </Link>
         </div>

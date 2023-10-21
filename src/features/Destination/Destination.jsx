@@ -15,7 +15,7 @@ function Destination() {
 
   return (
     <>
-      <Title className={"sm:mb-[64px] my-[30px]"} pageNumber={"01"}>
+      <Title className={"sm:mb-[64px]"} pageNumber={"01"}>
         {" "}
         pick your destination
       </Title>

@@ -4,8 +4,8 @@ function Home() {
   return (
     <>
       <div className="  text-white bg-cover   flex flex-col sm:mt-[160px]  ">
-        <div className="flex flex-col items-center  sm:gap-0 justify-center px-[10px] sm:flex sm:my-0 my-[50px]  sm:items-center ">
-          <div className="flex flex-col gap-[16px] sm:items-start items-center   ">
+        <div className="flex flex-col items-center  sm:gap-0  px-[10px] sm:flex sm:my-0 my-[50px]  sm:items-center ">
+          <div className="flex flex-col gap-[16px] sm:items-start    ">
             <div className="flex flex-col   uppercase ">
               <p className="tracking-[4.725px] sm:text-h5 text-[16px] text-mainLight">
                 so, you want to travel to

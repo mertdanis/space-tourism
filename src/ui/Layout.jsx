@@ -31,7 +31,7 @@ function Layout() {
         <Navbar />
       </header>
 
-      <main className="sm:grid flex flex-col items-center justify-center text-white text-2xl   sm:col-start-2 sm:col-end-7	">
+      <main className="sm:grid flex flex-col items-center text-white text-2xl   sm:col-start-2 sm:col-end-7	">
         <Outlet />
       </main>
     </div>

@@ -15,14 +15,14 @@ function Destination() {
 
   return (
     <>
-      <Title className={"sm:mb-[64px] my-[20px]"} pageNumber={"01"}>
+      <Title className={"sm:mb-[64px] my-[30px]"} pageNumber={"01"}>
         {" "}
         pick your destination
       </Title>
       <div className="     sm:ml-[6rem]  ">
         <div className="flex items-center  justify-center flex-col  sm:flex sm:gap-[10rem]   ">
           <img
-            className="sm:h-full h-[259px]  sm:mt-[64px] my-[20px] cursor-pointer hover:-translate-y-6 transition duration-500 "
+            className="sm:h-full h-[259px] w-[259px]  sm:mt-[64px] mb-[30px] cursor-pointer sm:hover:-translate-y-6 transition duration-500 "
             src={`${currentDestination?.images.png}`}
             alt={currentDestination?.name}
             title={`${currentDestination?.name}`}

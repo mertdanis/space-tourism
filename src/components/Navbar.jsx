@@ -9,10 +9,8 @@ function Navbar() {
 
   const [openHamburger, setopenHamburger] = useState(false);
 
-  console.log(openHamburger);
-
   return (
-    <div className=" bg-[rgba(255, 255, 255, 0.04)] backdrop-blur-[40px] flex justify-between sm:pl-[5rem]  sm:py-[6rem] sm:items-center py-[3rem]  ">
+    <div className=" sm:h-1/6   bg-[rgba(255, 255, 255, 0.04)] backdrop-blur-[40px] flex justify-between sm:pl-[5rem]  sm:py-[6rem] sm:items-center py-[3rem]  ">
       <div
         className={`flex justify-between   w-full px-6 ${
           openHamburger ? "items-start" : "items-center"
@@ -36,7 +34,7 @@ function Navbar() {
         </Link>
 
         {openHamburger ? (
-          <div className="absolute right-0 top-0 bg-[rgba(255, 255, 255, 0.04)] backdrop-blur-[40px]  sm:hidden h-screen z-10  p-2  text-mainWhite ">
+          <div className="absolute right-0 top-0 -[40px] bg-black  h-screen sm:hidden  z-10  p-2  text-mainWhite ">
             <div
               onClick={() => setopenHamburger(false)}
               className="absolute right-6 py-[48px] cursor-pointer "

@@ -12,16 +12,16 @@ function Crew() {
   return (
     <div className=" text-white sm:grid flex flex-col items-center justify-center ">
       <Title pageNumber={"02"}> meet your crew</Title>
-      <div className="relative">
-        <img
-          className="sm:hidden block   w-[177px h-[222px] my-[32px]  "
-          src={`${crewData?.images.png}`}
-          alt={`${crewData?.name}`}
-        />
-      </div>
+
+      <img
+        className="sm:hidden block    w-[177px h-[222px] my-[32px]  "
+        src={`${crewData?.images.png}`}
+        alt={`${crewData?.name}`}
+      />
+
       <div className="flex gap-[10rem]  sm:w-[55%] ">
         <div className="flex flex-col sm:items-start items-center gap-6   sm:mt-[10rem]">
-          <h4 className="sm:text-h4 text-[16px] tracking-widest opacity-50 text-mainWhite uppercase">
+          <h4 className="sm:text-h4 text-[16px] tracking-widest sm:opacity-50 text-mainWhite uppercase ">
             {crewData?.role}
           </h4>
           <h3 className="sm:text-h3 text-[24px] sm:mt-[15px] sm:mb-[27px] tracking-wide  uppercase">
@@ -30,7 +30,7 @@ function Crew() {
           <p className="sm:text-body_text text-mainLight sm:w-[65%] w-[85%] text-[15px]">
             {crewData?.bio}
           </p>
-          <div className="flex  sm:gap-5  ">
+          <div className="flex  sm:gap-5 gap-3 ">
             {data.crew?.map((bg, index) => {
               return (
                 <>
@@ -38,7 +38,7 @@ function Crew() {
                     onClick={() => {
                       setCurrentMember(index);
                     }}
-                    className={`  h-5 w-5 rounded-full   cursor-pointer mt-[7rem] ${
+                    className={`  h-5 w-5 rounded-full   cursor-pointer sm:mt-[7rem] my-[5px] ${
                       currentMember === index ? "bg-white" : "bg-slate-700"
                     }`}
                   ></div>

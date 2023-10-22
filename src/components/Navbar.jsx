@@ -34,7 +34,7 @@ function Navbar() {
         </Link>
 
         {openHamburger ? (
-          <div className="absolute right-0 top-0 -[40px] bg-black  h-screen sm:hidden  z-10  p-2  text-mainWhite ">
+          <div className="absolute top-0 right-0 p-3 h-screen bg-black  sm:hidden     text-mainWhite ">
             <div
               onClick={() => setopenHamburger(false)}
               className="absolute right-6 py-[48px] cursor-pointer "
@@ -64,8 +64,8 @@ function Navbar() {
                 />
               </svg>
             </div>
-            <nav className="flex mt-[10rem]">
-              <ul className=" flex flex-col text-white sm:text-2xl text-[16px] mr-[10rem] ml-[10rem] ">
+            <nav className="flex my-[90px]">
+              <ul className=" flex flex-col text-white sm:text-2xl text-[16px] sm:mr-[10rem] sm:ml-[10rem] ">
                 {pages?.map((page, index) => {
                   return (
                     <NavLink

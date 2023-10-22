@@ -12,8 +12,6 @@ function Technology() {
 
   const technologyContent = data.technology?.[step];
 
-  console.log(technologyContent);
-
   return (
     <>
       <Title pageNumber={"03"}> space launch 101</Title>

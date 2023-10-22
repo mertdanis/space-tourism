@@ -10,7 +10,7 @@ function Layout() {
 
   return (
     <div
-      className={`grid sm:grid-cols-7 grid-cols-1 sm:grid-rows-4 gird-rows-1 h-screen w-screen text-center sm:text-start    bg-cover text-white ${
+      className={`grid sm:grid-cols-7 grid-cols-1 sm:grid-rows-4 grid-rows-1 h-screen text-center sm:text-start    bg-cover text-white ${
         currentPage === "/home" ? "sm:bg-home bg-homeMobile" : ""
       }
       ${currentPage === "/" ? "sm:bg-home bg-homeMobile" : ""}

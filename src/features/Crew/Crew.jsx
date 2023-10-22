@@ -12,12 +12,14 @@ function Crew() {
   return (
     <div className=" text-white sm:grid flex flex-col items-center justify-center ">
       <Title pageNumber={"02"}> meet your crew</Title>
-      <img
-        className="sm:hidden block  relative w-[177px h-[222px] my-[32px]  "
-        src={`${crewData?.images.png}`}
-        alt={`${crewData?.name}`}
-      />
-      <div className="flex gap-[10rem] sm:w-[55%] ">
+      <div className="relative">
+        <img
+          className="sm:hidden block   w-[177px h-[222px] my-[32px]  "
+          src={`${crewData?.images.png}`}
+          alt={`${crewData?.name}`}
+        />
+      </div>
+      <div className="flex gap-[10rem]  sm:w-[55%] ">
         <div className="flex flex-col sm:items-start items-center gap-6   sm:mt-[10rem]">
           <h4 className="sm:text-h4 text-[16px] tracking-widest opacity-50 text-mainWhite uppercase">
             {crewData?.role}
@@ -25,10 +27,10 @@ function Crew() {
           <h3 className="sm:text-h3 text-[24px] sm:mt-[15px] sm:mb-[27px] tracking-wide  uppercase">
             {crewData?.name}
           </h3>
-          <p className="sm:text-body_text text-mainLight sm:w-[65%] text-[15px]">
+          <p className="sm:text-body_text text-mainLight sm:w-[65%] w-[85%] text-[15px]">
             {crewData?.bio}
           </p>
-          <div className="flex gap-5 ">
+          <div className="flex  sm:gap-5  ">
             {data.crew?.map((bg, index) => {
               return (
                 <>
@@ -45,12 +47,12 @@ function Crew() {
             })}
           </div>
         </div>
-        {/* 
+
         <img
-          className="absolute sm:bottom-0 sm:right-[352px] sm:top-auto top-0 sm:h-auto sm-w-auto h-[222px] w-[177px]   "
+          className="absolute sm:block sm:bottom-0 sm:right-[352px] sm:top-auto top-0 sm:h-auto sm-w-auto hidden   "
           src={`${crewData?.images.png}`}
           alt={`${crewData?.name}`}
-        /> */}
+        />
       </div>
     </div>
   );

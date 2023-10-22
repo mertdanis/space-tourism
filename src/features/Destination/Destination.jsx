@@ -15,14 +15,14 @@ function Destination() {
 
   return (
     <>
-      <Title className={"sm:mb-[64px]"} pageNumber={"01"}>
+      <Title className={"sm:mb-[64px] "} pageNumber={"01"}>
         {" "}
         pick your destination
       </Title>
-      <div className="     sm:ml-[6rem]  ">
-        <div className="flex items-center  justify-center flex-col  sm:flex sm:gap-[10rem]   ">
+      <div className=" sm:ml-[6rem]  ">
+        <div className="flex items-center  justify-center sm:flex-row flex-col  sm:flex sm:gap-[10rem]   ">
           <img
-            className="sm:h-full h-[259px] w-[259px]  sm:mt-[64px] mb-[30px] cursor-pointer sm:hover:-translate-y-6 transition duration-500 "
+            className="sm:h-[445px] sm:w-[445px] h-[259px] w-[259px]  sm:mt-[64px] mb-[30px] cursor-pointer sm:hover:-translate-y-6 transition duration-500 "
             src={`${currentDestination?.images.png}`}
             alt={currentDestination?.name}
             title={`${currentDestination?.name}`}
@@ -53,7 +53,7 @@ function Destination() {
             <p className="sm:text-body_text text-[15px] sm:w-full w-[80vw] mb-6  text-mainLight">
               {currentDestination?.description}
             </p>
-            <div className=" border-t-2 border-[#383B4B]  sm:flex flex-col justify-between gap-3 p-3 text-white  uppercase">
+            <div className=" border-t-2 border-[#383B4B]  flex sm:flex-row flex-col w-full justify-between sm:gap-3  p-3 text-white  uppercase">
               <div className="mt-6 flex flex-col gap-3">
                 <p className="opacity-50">avg. distance</p>
                 <h5 className="text-h5">{currentDestination?.distance}</h5>
